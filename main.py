@@ -25,18 +25,16 @@ def find_mismatch(text):
         position += 1
         if validPair == False: return position
     return False
-
 def main():
     text = input()
     if text == "I":
-        text = input()
-        mismatch = find_mismatch(text)
+        text = input()        
     else: text = fileinput.input(files = text)
+    mismatch = find_mismatch(text)
     # Printing answer, write your code here
     if mismatch == 0:
         print("Success")
     else:
         print(mismatch)
-
 if __name__ == "__main__":
     main()
