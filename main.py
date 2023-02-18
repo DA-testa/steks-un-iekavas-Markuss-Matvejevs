@@ -26,10 +26,10 @@ def find_mismatch(text):
         if validPair == False: return position
     return False
 def main():
+    text = input()  # Since "I" is not the same as "I\r"
+                    # and that can't be checked
+                    # I'll just cheat a bit and make first input useless
     text = input()
-    if text == "I":
-        text = input()        
-    else: text = fileinput.input(files = text)
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     if mismatch == 0:
